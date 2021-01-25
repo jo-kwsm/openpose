@@ -60,6 +60,8 @@ def main() -> None:
 
         id_name = data_json[idx]['img_paths'][-16:-4]
         image_path = os.path.join(args.dataset_dir, data_json[idx]['img_paths'])
+        if image_path.split("_")[1] == "train2014":
+            continue
         mask_path = mask_path_template%(stage_name, stage_name, id_name)
         data[stage_name]["image_path"].append(image_path)
         data[stage_name]["mask_path"].append(mask_path)

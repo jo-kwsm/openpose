@@ -80,6 +80,8 @@ class COCODataset(Dataset):
 
         img = cv2.imread(image_file_path)
         mask_miss = cv2.imread(mask_path)
+        if mask_miss is None:
+            mask_miss = img=np.zeros(img.shape, np.uint8)
         meta_data = self.meta_data[meta_data_idx]
 
         meta_data, img, mask_miss = self.transform(
