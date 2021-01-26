@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from modules import OpenPose_Feature, make_OpenPose_block
+from libs.models.modules import OpenPose_Feature, make_OpenPose_block
 
 
 class OpenPoseNet(nn.Module):
