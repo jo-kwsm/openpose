@@ -475,6 +475,11 @@ class DataTransform():
             'val': Compose([
                 get_anno(),
                 add_neck(),
+                # TODO validation 用のtransform に変更
+                aug_scale(),
+                aug_rotate(), 
+                aug_croppad(), 
+                aug_flip(),
                 remove_illegal_joint(),
                 # Normalize_Tensor(),
                 no_Normalize_Tensor(),

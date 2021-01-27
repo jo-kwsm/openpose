@@ -1,5 +1,5 @@
 python utils/make_csv_file.py
-python utils/make_configs.py --model Openpose
+python utils/make_configs.py --model Openpose --batch_size 2
 
 files="./result/*"
 for filepath in $files; do

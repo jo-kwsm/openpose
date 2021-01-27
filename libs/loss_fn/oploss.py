@@ -17,7 +17,7 @@ class OpenPoseLoss(nn.Module):
         loss = 0
 
         for i in range(6):
-            pred1 = saved_for_loss[2 * i] *paf_mask
+            pred1 = saved_for_loss[2 * i] * paf_mask
             gt1 = paf_target.float() * paf_mask
 
             pred2 = saved_for_loss[2 * i + 1] * heat_mask
